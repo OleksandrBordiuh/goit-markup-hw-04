@@ -115,7 +115,7 @@ a {
 /* Contacts-nav */
 
 .contacts-nav {
-  display: flex;
+  display: inline-flex;
   margin-left: auto;
 }
 
@@ -124,8 +124,8 @@ a {
 }
 
 .contacts-nav .link {
-  padding-top: 32px;
   padding-bottom: 32px;
+  padding-top: 32px;
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -139,12 +139,34 @@ a {
   color: var(--accent-color);
 }
 
+/* .mail::before {
+  content: "";
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+} */
+
 /* Hero */
 .hero {
+  max-width: 1600px;
+  height: 600px;
   padding-bottom: 200px;
   padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: rgba(47, 48, 58, 0.8);
   text-align: center;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -184,7 +206,7 @@ a {
 
 .hero .button:hover,
 .hero .button:focus {
-  background-color: blue;
+  background-color: #188ce8;
 }
 
 /* Section */
@@ -223,10 +245,10 @@ a {
   margin-left: 30px;
 }
 
-.advantages .link:hover,
+/* .advantages .link:hover,
 .advantages .link:focus {
   background-color: var(--accent-color);
-}
+} */
 
 .advantages .link {
   border-radius: 4px;
@@ -235,6 +257,32 @@ a {
   margin-bottom: 30px;
 
   background-color: var(--secondary-bg-color);
+}
+
+.advantages .item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bg-color);
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock1.svg);
+}
+
+.icon-diagrama::before {
+  background-image: url(../images/diagram1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut1.svg);
 }
 
 .advantages .section-title {
@@ -320,9 +368,29 @@ a {
 }
 
 .socials {
-  border-radius: 22px;
-  padding: 12px;
+  display: inline-block;
+  height: 44px;
+  width: 44px;
   background-color: var(--primary-white-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.icon-instagram {
+  background-image: url(../images/instagram1.svg);
+}
+
+.icon-twitter {
+  background-image: url(../images/twitter1.svg);
+}
+
+.icon-facebook {
+  background-image: url(../images/facebook1.svg);
+}
+
+.icon-linkedin {
+  background-image: url(../images/linkedin1.svg);
 }
 
 .socials:hover,
@@ -453,6 +521,22 @@ a {
 .socials:hover,
 .socials:focus {
   background-color: var(--accent-color);
+}
+
+.company-social .icon-instagram {
+  background-image: url(../images/instagram2.svg);
+}
+
+.company-social .icon-twitter {
+  background-image: url(../images/twitter2.svg);
+}
+
+.company-social .icon-facebook {
+  background-image: url(../images/facebook2.svg);
+}
+
+.company-social .icon-linkedin {
+  background-image: url(../images/linkedin2.svg);
 }
 
 .subscription {
