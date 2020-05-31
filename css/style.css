@@ -14,6 +14,7 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
+  --primary-svg-color: #afb1b8;
 }
 
 body {
@@ -117,6 +118,7 @@ a {
 .contacts-nav {
   display: inline-flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .contacts-nav .item:not(:last-child) {
@@ -139,8 +141,14 @@ a {
   color: var(--accent-color);
 }
 
-.mail {
+.contacts-icon {
   margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts-icon:hover,
+.contacts-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -240,39 +248,11 @@ a {
   margin-left: 30px;
 }
 
-.advantages .link {
-  border-radius: 4px;
-  padding: 25px 100px;
-  min-width: 270px;
-  margin-bottom: 30px;
-
-  background-color: var(--secondary-bg-color);
-}
-
-.advantages .item::before {
-  content: "";
-  display: block;
+.advantages-thumb {
   height: 120px;
   margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 25px 100px;
   background-color: var(--secondary-bg-color);
-}
-
-.icon-antenna::before {
-  background-image: url(../images/antenna1.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock1.svg);
-}
-
-.icon-diagrama::before {
-  background-image: url(../images/diagram1.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut1.svg);
 }
 
 .advantages .section-title {
@@ -301,16 +281,6 @@ a {
   margin-left: 30px;
 }
 
-.services .link {
-  display: inline-block;
-  border: 2px solid transparent;
-}
-
-.services .link:hover,
-.services .link:focus {
-  border: 2px solid darkblue;
-}
-
 .services-name {
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--primary-white-color);
@@ -337,6 +307,8 @@ a {
   padding-bottom: 24px;
 
   background-color: var(--primary-white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .team > .item + .item {
@@ -361,31 +333,23 @@ a {
   display: inline-block;
   height: 44px;
   width: 44px;
+  padding: 12px;
+
+  fill: var(--primary-svg-color);
   background-color: var(--primary-white-color);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
 }
 
-.icon-instagram {
-  background-image: url(../images/instagram1.svg);
-}
-
-.icon-twitter {
-  background-image: url(../images/twitter1.svg);
-}
-
-.icon-facebook {
-  background-image: url(../images/facebook1.svg);
-}
-
-.icon-linkedin {
-  background-image: url(../images/linkedin1.svg);
-}
-
 .socials:hover,
 .socials:focus {
   background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.socials-icon {
+  color: currentColor;
 }
 
 .list-socials {
@@ -416,39 +380,50 @@ a {
 }
 
 .clients .link {
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--primary-svg-color);
   border-radius: 4px;
-  min-width: 170px;
-  min-height: 90px;
+  height: 90px;
+  fill: var(--primary-svg-color);
 }
 
 .first-client {
-  padding: 20px 61.5px;
+  padding-top: 20px;
+  padding-left: 63px;
 }
 
 .second-client {
-  padding: 18px 64px;
+  padding-top: 19px;
+  padding-left: 65px;
 }
 
 .third-client {
-  padding: 23px 63.5px;
+  padding-top: 24px;
+  padding-left: 65px;
 }
 
 .fourth-client {
-  padding: 23.5px 43px;
+  padding-top: 24px;
+  padding-left: 45px;
 }
 
 .fifth-client {
-  padding: 20.5px 54.5px;
+  padding-top: 22px;
+  padding-left: 56px;
 }
 
 .sixth-client {
-  padding: 21.5px 39.5px;
+  padding-top: 22px;
+  padding-left: 41px;
 }
 
 .clients .link:hover,
 .clients .link:focus {
   border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.client-icon {
+  color: currentColor;
 }
 
 /* Footer */
@@ -502,6 +477,7 @@ a {
 
 .company-social .socials {
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-white-color);
 }
 
 .list-socials .item + .item {
@@ -603,7 +579,7 @@ a {
 }
 
 .work-examples .item {
-  border: 2px solid #eeeeee;
+  border: 1px solid #eeeeee;
   border-radius: 5px;
 
   width: calc((100% - 2 * 30px) / 3);
@@ -622,7 +598,8 @@ a {
 
 .work-examples .item:hover,
 .work-examples .item:focus {
-  border: 2px solid darkblue;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .project {
