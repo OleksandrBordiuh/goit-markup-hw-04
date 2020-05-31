@@ -139,14 +139,9 @@ a {
   color: var(--accent-color);
 }
 
-/* .mail::before {
-  content: "";
-  width: 16px;
-  height: 11px;
+.mail {
   margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-size: contain;
-} */
+}
 
 /* Hero */
 .hero {
@@ -244,11 +239,6 @@ a {
 .advantages .item + .item {
   margin-left: 30px;
 }
-
-/* .advantages .link:hover,
-.advantages .link:focus {
-  background-color: var(--accent-color);
-} */
 
 .advantages .link {
   border-radius: 4px;
